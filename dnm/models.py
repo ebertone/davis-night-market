@@ -6,4 +6,7 @@ class Members(db.Model):
     member_image = db.Column(db.Text, nullable=True)
 
 class References(db.Model):
-    
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String, nullable=True)
+    link = db.Column(db.Text, nullable=True)
+    image = db.Column(db.Text, nullable=True)
