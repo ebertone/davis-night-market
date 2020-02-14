@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    {% if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title>Davis Night Market</title>
+    {% endif %}
+    {% block style %}{% endblock %}
+</head>
+<div class="nav">
+    <a href="#home"><img class="logo" src="{{ url_for("static", filename="images/DMN Logo 1.png") }}"></a></li>
+    <ul>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#donate">Donate</a></li>
+        <li><a href="#sponsors">Sponsors</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+</div>
+<body>
+{% block content %}{% endblock %}
+</body>
+</html>

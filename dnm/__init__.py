@@ -14,8 +14,10 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 from dnm.members.routes import members
+from dnm.pages.routes import pages
 from dnm.references.routes import references
 
 
 app.register_blueprint(members)
+app.register_blueprint(pages)
 app.register_blueprint(references)

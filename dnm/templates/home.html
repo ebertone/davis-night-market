@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/home_section.css") }}">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+{% endblock %}
+{% block content %}
+<div class="home">
+    <div class="title">
+        <img src="{{ url_for("static", filename="images/Untitled_Artwork 7.png") }}">
+    </div>
+    <div class="donate">
+        <p><b>Nobody</b> goes to bed hungry.</p>
+        <button class="btn givefood">Donate Food</button>
+        <button class="btn gofundme">Volunteer</button>
+    </div>
+</div>
+{% endblock %}
