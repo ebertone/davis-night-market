@@ -1,17 +1,85 @@
 {% extends "layout.html" %}
 {% block style %}
     <link rel="stylesheet" href="{{ url_for("static", filename="css/home_section.css") }}">
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/team.css") }}">
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 {% endblock %}
 {% block content %}
-<div class="home">
-    <div class="title">
-        <img src="{{ url_for("static", filename="images/Untitled_Artwork 7.png") }}">
+    {#    Home Section#}
+    <div class="home">
+        <div class="nav">
+            <a href="#home"><img class="logo" src="{{ url_for("static", filename="images/DMN Logo 1.png") }}"></a></li>
+            <ul>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#donate">Donate</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+
+
+        <div class="title">
+            <img src="{{ url_for("static", filename="images/Untitled_Artwork 7.png") }}">
+        </div>
+        <div class="donate">
+            <p><b>Nobody</b> goes to bed hungry.</p>
+            <button class="btn givefood">Donate Food</button>
+            <button class="btn gofundme">Volunteer</button>
+        </div>
     </div>
-    <div class="donate">
-        <p><b>Nobody</b> goes to bed hungry.</p>
-        <button class="btn givefood">Donate Food</button>
-        <button class="btn gofundme">Volunteer</button>
+    {#    Team Section#}
+    <div class="flex-container">
+        <h1>Team</h1>
+        <h2>We're composed of a market that recovers food that would go to waste from Davis restaurants after they
+            close, and distribute!</h2>
+
+        <div>
+            <div class="headshot">
+            </div>
+            <div class="caption">
+                <p>Jane Doe</p>
+            </div>
+        </div>
+        <div>
+            <div class="headshot">
+            </div>
+            <div class="caption">
+                <p>Jane Doe</p>
+            </div>
+        </div>
+        <div>
+            <div class="headshot">
+            </div>
+            <div class="caption">
+                <p>Jane Doe</p>
+            </div>
+        </div>
+        <div>
+            <div class="headshot">
+            </div>
+            <div class="caption">
+                <p>Jane Doe</p>
+            </div>
+        </div>
+        <div>
+            <div class="headshot">
+            </div>
+            <div class="caption">
+                <p>Jane Doe</p>
+            </div>
+        </div>
+        <div>
+            <div class="headshot">
+            </div>
+            <div class="caption">
+                <p>Jane Doe</p>
+            </div>
+        </div>
+
+        <div id="back">
+            Interested in volunteering? Fill out the contact form below and a team member will get to you shortly.
+        </div>
     </div>
-</div>
 {% endblock %}
