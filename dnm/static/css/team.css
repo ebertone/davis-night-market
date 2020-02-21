@@ -1,0 +1,75 @@
+h1 {
+	color: #FFF598;
+	position: relative;
+	width: 750px;
+    /*left: 278px;*/
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 72px;
+    justify-content: left;
+
+}
+h2 {
+	position: relative;
+	width: 750px;
+	height: 123px;
+	color: white;
+	font-family: 'Muli';
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 25px;
+	/*left: 278px;*/
+}
+
+p {
+	font-family: 'Muli';
+	color: #FFFFFF;
+}
+
+.flex-container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	height: 80%;
+	margin-left: 5%;
+    margin-top: 100vh;
+
+}
+
+.headshot {
+	background-color: #353535;
+	position: relative;
+	width: 214px;
+	height: 191px;
+}
+
+.caption {
+	position: relative;
+	width: 191px;
+	height: 75px;
+	font-family: 'Muli';
+	font-size: 20px;
+}
+
+.position {
+	/*margin-top: 0px;*/
+	font-size: 12px;
+	top : -7px;
+}
+
+#back{
+	position: relative;
+    width: 750px;
+	height: 150px;
+	/*left: 285px;*/
+	top: 10px;
+	font-family: Muli;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 25px;
+	color: #FFFFFF;
+}
