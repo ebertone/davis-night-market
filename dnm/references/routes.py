@@ -10,10 +10,11 @@ references = Blueprint("references", __name__)
 def create_reference():
     data = request.get_json()
     # Ask Bryan about how to get the reference link from JSON object
-    reference=Reference(name=data["entry"]["name"], link=data[""], content_id=data["entry"]["id"])
+    reference = Reference(name=data["entry"]["name"], link=data[""], content_id=data["entry"]["id"])
     db.session.add(reference)
     db.session.commit()
-    return {"Status": "Reference Created"}
+
+    return {"Status": "Reference Created"}, 200
 
 
 @references.route("/references/update", methods=['PUT'])
@@ -23,7 +24,8 @@ def update_reference():
     reference.name = data["name"]
     reference.link = data["link"]
     db.session.commit()
-    return {"Message": "Reference Updated"}
+
+    return {"Message": "Reference Updated"}, 200
 
 
 @references.route("/references/delete", methods=['DELETE'])
@@ -32,4 +34,5 @@ def delete_reference():
     reference = Reference.query.filter_by(content_id=data["id"]).first()
     db.delete(reference)
     db.session.commit()
-    return {"Status": "Reference Deleted"}
+
+    return {"Status": "Reference Deleted"}, 200
