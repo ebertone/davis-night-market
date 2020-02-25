@@ -2,7 +2,6 @@ h1 {
 	color: #FFF598;
 	position: relative;
 	width: 750px;
-    /*left: 278px;*/
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
@@ -14,19 +13,10 @@ h1 {
 h2 {
 	position: relative;
 	width: 750px;
-	height: 123px;
-	color: white;
-	font-family: 'Muli';
 	font-style: normal;
 	font-weight: normal;
 	font-size: 20px;
 	line-height: 25px;
-	/*left: 278px;*/
-}
-
-p {
-	font-family: 'Muli';
-	color: #FFFFFF;
 }
 
 .flex-container {
@@ -35,8 +25,6 @@ p {
 	justify-content: space-around;
 	height: 80%;
 	margin-left: 5%;
-    margin-top: 100vh;
-
 }
 
 .headshot {

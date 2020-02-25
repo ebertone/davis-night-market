@@ -1,20 +1,4 @@
-p {
-    font-family: Muli, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 25px;
-    line-height: 31px;
-    color: #FFFFFF;
-    margin-left: 11px;
-}
-
-body {
-    background-color: #070707;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-.home{
+.home {
     height: 100vh;
 }
 
@@ -81,6 +65,14 @@ div.home {
     height: 597px;
     left: 0%;
     top: 0px;
+}
+
+#quote {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 31px;
+    margin-left: 11px;
 }
 
 .logo {
