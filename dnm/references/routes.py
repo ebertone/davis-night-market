@@ -5,14 +5,16 @@ from dnm.models import Reference
 # Blueprint for references
 references = Blueprint("references", __name__)
 
+
 @references.route("/references/create", methods=['POST'])
 def create_reference():
-    data=request.get_json()]
+    data = request.get_json()
     # Ask Bryan about how to get the reference link from JSON object
-    # reference=Reference(name=data["entry"]["name"], link=data[""], content_id=data["entry"]["id"])
+    reference=Reference(name=data["entry"]["name"], link=data[""], content_id=data["entry"]["id"])
     db.session.add(reference)
     db.session.commit()
-    return {"Status" : "Reference Created"}
+    return {"Status": "Reference Created"}
+
 
 @references.route("/references/update", methods=['PUT'])
 def update_reference():
@@ -21,7 +23,8 @@ def update_reference():
     reference.name = data["name"]
     reference.link = data["link"]
     db.session.commit()
-    return {"Message" : "Reference Updated"}
+    return {"Message": "Reference Updated"}
+
 
 @references.route("/references/delete", methods=['DELETE'])
 def delete_reference():
@@ -29,4 +32,4 @@ def delete_reference():
     reference = Reference.query.filter_by(content_id=data["id"]).first()
     db.delete(reference)
     db.session.commit()
-    return {"Status" : "Reference Deleted"}
+    return {"Status": "Reference Deleted"}
