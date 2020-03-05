@@ -1,0 +1,80 @@
+.grid
+ {
+  display: grid;
+  grid-template-columns: repeat(3,214px);  /* 3 columns, 214 is the width */
+  grid-template-rows: repeat(2,131px); /* 2 rows, 131px is the hight  */
+  grid-gap:35px 25px; /* 50 pixels of space added between rows and 30 pixels added between columns  */
+  max-width: 100%;
+  height: auto;
+}
+
+/*make div class="grid-item if you want a gray border around it*/
+.grid-item{
+  border:thin gray solid;
+  padding:10px;
+}
+
+
+img{
+    width: 100%;
+    max-width:704px;
+    max-height:193px;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:auto;
+    align-items: center;
+}
+
+
+.position{
+    left: 276px;
+    top: 2981px;
+
+}
+.positionExtra{
+    width: 704px;
+    height: 314px;
+    left: 276px;
+    top: 4000px;
+
+}
+
+.header{
+    font-family: Muli;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 25px;
+    color: #FFF598;
+}
+
+.body{
+    font-family: Muli;
+    font-style: normal;
+    font-weight: normal;
+    /*font-size: 20px; . . . this code makes the font unscalable*/
+    /*this thing makes the font size work*/
+    font-size: 3vmin;
+    line-height: 25px;
+    color: white;
+}
+
+.resource-section {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+#resources{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#resources > img{
+    width: 300px;
+    padding: 5px;
+}

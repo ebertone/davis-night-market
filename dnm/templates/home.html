@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="{{ url_for("static", filename="css/about.css") }}">
     <link rel="stylesheet" href="{{ url_for("static", filename="css/global.css") }}">
     <link rel="stylesheet" href="{{ url_for("static", filename="css/home_section.css") }}">
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/resources.css") }}">
     <link rel="stylesheet" href="{{ url_for("static", filename="css/team.css") }}">
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 {% endblock %}
@@ -73,6 +74,32 @@
                 <span class="dot" onclick="currentSlide(3)"></span>
             </div>
         </div>
+    </div>
+    {#    Resources section#}
+    <div>
+        <h1>Resources</h1>
+    </div>
+
+    <div class="wrapper resource-section">
+        <img src="{{ url_for("static", filename="images/picture.jpg") }}" alt="test picture" id="banner-image">
+
+
+        <p class="position">
+            <span class="header">How do you build a freedge?<br><br></span>
+            <span class="body">To participate, please send a message to <u>nightmarket@freedge.org</u> and a group of volunteers will come pick up the unsold food once a week.
+                        The Davis Night Market recovers food that would go to waste from Davis restaurants after they close, and distribute it to people in need at the Central <br><br></span>
+            <span class="header">Want additional resources? </span>
+        </p>
+
+        <div id="resources" class="resource-section">
+            <img class="dynamicPage" src="{{ url_for("static", filename="images/picture.jpg") }}">
+            <img class="dynamicPage" src="{{ url_for("static", filename="images/picture.jpg") }}">
+            <img class="dynamicPage" src="{{ url_for("static", filename="images/picture.jpg") }}">
+            <img class="dynamicPage" src="{{ url_for("static", filename="images/picture.jpg") }}">
+            <img class="dynamicPage" src="{{ url_for("static", filename="images/picture.jpg") }}">
+            <img class="dynamicPage" src="{{ url_for("static", filename="images/picture.jpg") }}">
+        </div>
+
     </div>
     {#    Team Section#}
     <h1>Team</h1>
