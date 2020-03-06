@@ -1,38 +1,38 @@
 from flask import Blueprint, request
 from dnm import db
-from dnm.models import Reference
+from dnm.models import Resource
 
-# Blueprint for references
-references = Blueprint("references", __name__)
+# Blueprint for resources
+resources = Blueprint("resources", __name__)
 
 
-@references.route("/references/create", methods=['POST'])
-def create_reference():
+@resources.route("/resources/create", methods=['POST'])
+def create_resource():
     data = request.get_json()
-    # Ask Bryan about how to get the reference link from JSON object
-    reference = Reference(name=data["entry"]["name"], link=data[""], content_id=data["entry"]["id"])
-    db.session.add(reference)
+    # Ask Bryan about how to get the resource link from JSON object
+    resource = Resource(name=data["entry"]["name"], link=data[""], content_id=data["entry"]["id"])
+    db.session.add(resource)
     db.session.commit()
 
-    return {"Status": "Reference Created"}, 200
+    return {"Status": "Resource Created"}, 200
 
 
-@references.route("/references/update", methods=['PUT'])
-def update_reference():
+@resources.route("/resources/update", methods=['PUT'])
+def update_resource():
     data = request.get_json()
-    reference = Reference.query.filter_by(content_id=data["id"]).first()
-    reference.name = data["name"]
-    reference.link = data["link"]
+    resource = Resource.query.filter_by(content_id=data["id"]).first()
+    resource.name = data["name"]
+    resource.link = data["link"]
     db.session.commit()
 
-    return {"Message": "Reference Updated"}, 200
+    return {"Message": "Resource Updated"}, 200
 
 
-@references.route("/references/delete", methods=['DELETE'])
-def delete_reference():
+@resources.route("/resources/delete", methods=['DELETE'])
+def delete_resource():
     data = request.get_json()
-    reference = Reference.query.filter_by(content_id=data["id"]).first()
-    db.delete(reference)
+    resource = Resource.query.filter_by(content_id=data["id"]).first()
+    db.delete(resource)
     db.session.commit()
 
-    return {"Status": "Reference Deleted"}, 200
+    return {"Status": "Resource Deleted"}, 200

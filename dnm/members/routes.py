@@ -17,9 +17,10 @@ def create_member():
     return {"Message": "Member Created"}, 200
 
 
-@members.route("/members/edit", methods=['POST'])
+@members.route("/members/edit", methods=["POST"])
 def update_members():
     data = request.get_json()
+    print(data)
     member = Member.query.filter_by(content_id=data["entry"]["id"]).first()
     member.name = data["entry"]["Name"]
     image_new = "https://include-dnm.herokuapp.com" + data["entry"]["Image"][0]["url"]

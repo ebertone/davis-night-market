@@ -107,48 +107,58 @@
         after they
         close, and distribute!</p>
     <div class="flex-container">
-        <div>
-            <div class="headshot">
+        {% for member in members %}
+            <div>
+                <div class="headshot">
+                    <img src="{{ member.image }}" alt="">
+                </div>
+                <div class="caption">
+                    <p>{{ member.name }}</p>
+                </div>
             </div>
-            <div class="caption">
-                <p>Jane Doe</p>
-            </div>
-        </div>
-        <div>
-            <div class="headshot">
-            </div>
-            <div class="caption">
-                <p>Jane Doe</p>
-            </div>
-        </div>
-        <div>
-            <div class="headshot">
-            </div>
-            <div class="caption">
-                <p>Jane Doe</p>
-            </div>
-        </div>
-        <div>
-            <div class="headshot">
-            </div>
-            <div class="caption">
-                <p>Jane Doe</p>
-            </div>
-        </div>
-        <div>
-            <div class="headshot">
-            </div>
-            <div class="caption">
-                <p>Jane Doe</p>
-            </div>
-        </div>
-        <div>
-            <div class="headshot">
-            </div>
-            <div class="caption">
-                <p>Jane Doe</p>
-            </div>
-        </div>
+        {% endfor %}
+{#        <div>#}
+{#            <div class="headshot">#}
+{#            </div>#}
+{#            <div class="caption">#}
+{#                <p>Jane Doe</p>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div>#}
+{#            <div class="headshot">#}
+{#            </div>#}
+{#            <div class="caption">#}
+{#                <p>Jane Doe</p>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div>#}
+{#            <div class="headshot">#}
+{#            </div>#}
+{#            <div class="caption">#}
+{#                <p>Jane Doe</p>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div>#}
+{#            <div class="headshot">#}
+{#            </div>#}
+{#            <div class="caption">#}
+{#                <p>Jane Doe</p>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div>#}
+{#            <div class="headshot">#}
+{#            </div>#}
+{#            <div class="caption">#}
+{#                <p>Jane Doe</p>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div>#}
+{#            <div class="headshot">#}
+{#            </div>#}
+{#            <div class="caption">#}
+{#                <p>Jane Doe</p>#}
+{#            </div>#}
+{#        </div>#}
 
         <div id="back">
             Interested in volunteering? Fill out the contact form below and a team member will get to you shortly.
