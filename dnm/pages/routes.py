@@ -1,4 +1,4 @@
-from dnm.models import Member, Reference
+from dnm.models import Member, Resource
 from flask import Blueprint, render_template
 
 pages = Blueprint('pages', __name__)
