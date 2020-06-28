@@ -9,7 +9,7 @@ members = Blueprint("members", __name__)
 @members.route("/members/create", methods=["POST"])
 def create_member():
     data = request.get_json()
-    image = "https://dnm-cms.herokuapp.com" + data["entry"]["Image"][0]["url"]
+    image = "https://dnm-cms.herokuapp.com" + data["entry"]["image"][0]["url"]
     member = Member(name=data["entry"]["Name"], 
                     image=image, 
                     content_id=data["entry"]["id"])
@@ -24,7 +24,7 @@ def update_members():
     data = request.get_json()
     member = Member.query.filter_by(content_id=data["entry"]["id"]).first()
     member.name = data["entry"]["Name"]
-    image_new = "https://dnm-cms.herokuapp.com" + data["entry"]["Image"][0]["url"]
+    image_new = "https://dnm-cms.herokuapp.com" + data["entry"]["image"][0]["url"]
     member.image = image_new
     db.session.commit()
 
