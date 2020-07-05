@@ -15,7 +15,7 @@ migrate = Migrate(app, db)
 
 from dnm.members.routes import members
 from dnm.pages.routes import pages
-from dnm.references.routes import resources
+from dnm.resources.routes import resources
 
 
 app.register_blueprint(members)
