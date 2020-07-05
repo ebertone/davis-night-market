@@ -19,11 +19,11 @@ def create_member():
     return {"Message": "Member Created"}, 200
 
 
-@members.route("/members/edit", methods=["POST"])
+@members.route("/members/update", methods=["POST"])
 def update_members():
     data = request.get_json()
     member = Member.query.filter_by(content_id=data["entry"]["id"]).first()
-    member.name = data["entry"]["Name"]
+    member.name = data["entry"]["name"]
     image = "https://davis-night-market-cms.herokuapp.com" + data["entry"]["image"]["url"]
     member.image = image
     db.session.commit()

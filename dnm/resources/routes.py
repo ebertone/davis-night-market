@@ -12,7 +12,8 @@ def create_resource():
     image = "https://davis-night-market-cms.herokuapp.com" + data["entry"]["image"]["url"]
     resource = Resource(name=data["entry"]["name"], 
                         link=data["entry"]["link"], 
-                        content_id=data["entry"]["id"])
+                        content_id=data["entry"]["id"],
+                        image=image)
     db.session.add(resource)
     db.session.commit()
 
