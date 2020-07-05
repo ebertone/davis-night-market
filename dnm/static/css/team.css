@@ -44,16 +44,24 @@ h2 {
 }
 
 .position {
-	/*margin-top: 0px;*/
 	font-size: 12px;
 	top : -7px;
+}
+
+.member {
+	padding: 3px;
+}
+
+.member-image {
+	width: 100%;
+    max-width:704px;
+    max-height:193px;
 }
 
 #back{
 	position: relative;
     width: 750px;
 	height: 150px;
-	/*left: 285px;*/
 	top: 10px;
 	font-family: Muli;
 	font-style: normal;

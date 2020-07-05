@@ -8,7 +8,5 @@ pages = Blueprint('pages', __name__)
 def create_member():
     members = Member.query.all()
     resources = Resource.query.all()
-    print(members)
-    print(resources)
 
     return render_template("home.html", members=members, resources=resources)

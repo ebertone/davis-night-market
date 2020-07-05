@@ -92,6 +92,11 @@
         </p>
 
         <div id="resources" class="resource-section">
+            {% for resource in resources %}
+                <img class="dynamicPage" src="{{resouece}}">
+
+            {% endfor %}
+
             <img class="dynamicPage" src="{{ url_for("static", filename="images/picture.jpg") }}">
             <img class="dynamicPage" src="{{ url_for("static", filename="images/picture.jpg") }}">
             <img class="dynamicPage" src="{{ url_for("static", filename="images/picture.jpg") }}">
@@ -108,61 +113,18 @@
         close, and distribute!</p>
     <div class="flex-container">
         {% for member in members %}
-            <div>
+            <div class="member">
                 <div class="headshot">
-                    <img src="{{ member.image }}" alt="">
+                    <img class="member-image" src="{{ member.image }}" alt="">
                 </div>
                 <div class="caption">
                     <p>{{ member.name }}</p>
                 </div>
             </div>
         {% endfor %}
-{#        <div>#}
-{#            <div class="headshot">#}
-{#            </div>#}
-{#            <div class="caption">#}
-{#                <p>Jane Doe</p>#}
-{#            </div>#}
-{#        </div>#}
-{#        <div>#}
-{#            <div class="headshot">#}
-{#            </div>#}
-{#            <div class="caption">#}
-{#                <p>Jane Doe</p>#}
-{#            </div>#}
-{#        </div>#}
-{#        <div>#}
-{#            <div class="headshot">#}
-{#            </div>#}
-{#            <div class="caption">#}
-{#                <p>Jane Doe</p>#}
-{#            </div>#}
-{#        </div>#}
-{#        <div>#}
-{#            <div class="headshot">#}
-{#            </div>#}
-{#            <div class="caption">#}
-{#                <p>Jane Doe</p>#}
-{#            </div>#}
-{#        </div>#}
-{#        <div>#}
-{#            <div class="headshot">#}
-{#            </div>#}
-{#            <div class="caption">#}
-{#                <p>Jane Doe</p>#}
-{#            </div>#}
-{#        </div>#}
-{#        <div>#}
-{#            <div class="headshot">#}
-{#            </div>#}
-{#            <div class="caption">#}
-{#                <p>Jane Doe</p>#}
-{#            </div>#}
-{#        </div>#}
-
-        <div id="back">
-            Interested in volunteering? Fill out the contact form below and a team member will get to you shortly.
-        </div>
+    </div>
+    <div id="back">
+        Interested in volunteering? Fill out the contact form below and a team member will get to you shortly.
     </div>
     {% block script %}
         <script src="{{ url_for('static', filename='js/about.js') }}"></script>

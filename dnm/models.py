@@ -20,6 +20,7 @@ class Resource(db.Model):
     content_id = db.Column(db.Integer, nullable=True)
     name = db.Column(db.String, nullable=True)
     link = db.Column(db.Text, nullable=True)
+    image = db.Column(db.Text, nullable=True)
 
     def __repr__(self):
         return f"Resource('{self.name}')"
