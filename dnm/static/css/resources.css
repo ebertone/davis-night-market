@@ -47,8 +47,6 @@
     font-family: Muli;
     font-style: normal;
     font-weight: normal;
-    /*font-size: 20px; . . . this code makes the font unscalable*/
-    /*this thing makes the font size work*/
     font-size: 3vmin;
     line-height: 25px;
     color: white;
