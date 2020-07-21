@@ -60,7 +60,11 @@
     justify-content: center;
 }
 
-#resources{
+#main-resource {
+    width: 700px;
+}
+
+#resources {
     display: flex;
     justify-content: center;
     flex-direction: row;
