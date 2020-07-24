@@ -13,6 +13,7 @@
   border:thin gray solid;
   padding:10px;
 }
+
 .wrapper{
     display: flex;
     flex-direction: column;
@@ -22,12 +23,12 @@
 }
 
 
-.position{
+.position {
     left: 276px;
     top: 2981px;
 
 }
-.positionExtra{
+.positionExtra {
     width: 704px;
     height: 314px;
     left: 276px;
@@ -35,21 +36,21 @@
 
 }
 
-.header{
+.header {
     font-family: Muli;
     font-style: normal;
     font-weight: normal;
+    font-size: 25px;
     line-height: 25px;
     color: #FFF598;
 }
 
-.body{
+.body {
     font-family: Muli;
     font-style: normal;
     font-weight: normal;
-    font-size: 3vmin;
+    font-size: 20px;
     line-height: 25px;
-    color: white;
 }
 
 .resource-section {
@@ -59,13 +60,7 @@
 }
 
 #main-resource {
-    width: 700px;
-}
-
-#resources {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
+    width: 577px;
 }
 
 #resources a img {

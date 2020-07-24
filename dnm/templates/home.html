@@ -37,7 +37,7 @@
 <div class="totalContent-container">
     <!-- About container -->
     <div class="about-container">
-        <h2>About</h2>
+        <h2 id="about">About</h2>
         <p class="description">Davis Night Market (DNM) is a UC Davis-student run organization that partners with
             local restaurants to
             distribute extra food to community members in need.
@@ -76,9 +76,7 @@
     </div>
 </div>
 
-<div>
-    <h1>Resources</h1>
-</div>
+<h1 id="resources">Resources</h1>
 
 <div class="wrapper resource-section">
     <img id='main-resource' src="{{ url_for("static", filename="images/picture.jpg") }}" alt="test picture" id="banner-image">
@@ -103,7 +101,7 @@
 
 </div>
 
-<h1>Team</h1>
+<h1 id="team">Team</h1>
 <p class="description">We're composed of a market that recovers food that would go to waste from Davis restaurants
     after they
     close, and distribute!
@@ -126,7 +124,9 @@
 </div>
 
 {% block script %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='js/about.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/slide.js') }}"></script>
 {% endblock %}
 
 {% endblock %}
