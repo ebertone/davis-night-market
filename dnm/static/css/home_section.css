@@ -16,18 +16,12 @@
     }
 
     .donate {
-        position: absolute;
         width: 480px;
         height: 335px;
         padding-top: 90px;
         margin-top: 20px;
         margin-bottom: 459px;
-        margin-left: 50%;
-        float: right;
-    }
-
-    .nav {
-        padding-right: 0%;
+        margin-left: 53%;
     }
 }
 
